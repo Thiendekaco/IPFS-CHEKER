@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/IPFS-CHEKER/static/css/main.9086da45.css",
-    "main.js": "/IPFS-CHEKER/static/js/main.8b2fd5bb.js",
+    "main.js": "/IPFS-CHEKER/static/js/main.3ae356ac.js",
     "static/js/787.cd7d7d7f.chunk.js": "/IPFS-CHEKER/static/js/787.cd7d7d7f.chunk.js",
     "index.html": "/IPFS-CHEKER/index.html",
     "main.9086da45.css.map": "/IPFS-CHEKER/static/css/main.9086da45.css.map",
-    "main.8b2fd5bb.js.map": "/IPFS-CHEKER/static/js/main.8b2fd5bb.js.map",
+    "main.3ae356ac.js.map": "/IPFS-CHEKER/static/js/main.3ae356ac.js.map",
     "787.cd7d7d7f.chunk.js.map": "/IPFS-CHEKER/static/js/787.cd7d7d7f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.9086da45.css",
-    "static/js/main.8b2fd5bb.js"
+    "static/js/main.3ae356ac.js"
   ]
 }
