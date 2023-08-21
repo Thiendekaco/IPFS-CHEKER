@@ -1,4 +1,4 @@
-declare module '@dutu/rate-limiter'
+
 declare module 'ipfs-geoip'
 
 declare namespace IpfsGeoip {
