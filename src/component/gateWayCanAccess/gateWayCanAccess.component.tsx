@@ -36,7 +36,6 @@ const GateWayCanAccess = ( { onCheckProps, index} :gatewayProps )=>{
 
     const getUrlCanBeAccess = async ()=>{
         await gateWayCheckAccess.onCheck({gateWayUrl: onCheckProps.gateWayUrl, typeCheck: 1,});
-
         getResultCheckAccess({data : gateWayCheckAccess.getLinkImage(), isLoading : gateWayCheckAccess.getIsLoading() });
         setIsUrlAccess(gateWayCheckAccess.getStateIsOnline());
         if(gateWayCheckAccess.getStateIsOnline()){
