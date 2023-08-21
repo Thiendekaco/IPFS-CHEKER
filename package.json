@@ -11,6 +11,7 @@
     "@types/react": "^18.2.20",
     "@types/react-dom": "^18.2.7",
     "axios": "^1.4.0",
+    "gh-pages": "^6.0.0",
     "ipfs-geoip": "^9.0.1",
     "ipfs-http-client": "^60.0.1",
     "nft.storage": "^7.1.1",
