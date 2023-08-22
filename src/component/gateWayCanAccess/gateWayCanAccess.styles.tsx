@@ -49,7 +49,16 @@ export const ImgCountryHostNotFound = styled.div`
   border-radius: 30%;
   background-color: ${ props => props.theme.background_colorContent };
   margin-top: 17px;
+
 `
 export const MarginBox = styled.div`
     width: 50px;
+`
+export const CheckCordsStyle = styled.div`
+  color : ${ props => props.theme.color };
+  font-size: x-large;
+  font-weight: 400;
+  padding-top: 17px;
+  width: 44px;
+  text-align: center;
 `

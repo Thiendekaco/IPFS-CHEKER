@@ -31,7 +31,7 @@ export const NavigateFormatHostName = styled(Link)`
 
 export const ContentContainer = styled.div`
   width: 100%;
-  height: 400px;
+  height: 350px;
   overflow-y: scroll ;
   -ms-overflow-style: none;
   scrollbar-width: none;
@@ -44,10 +44,13 @@ export const ContentContainer = styled.div`
 export const LabelContainer = styled.div`
   display: flex;
   flex-direction: row;
-
+  margin: 0 100px 10px 50px;
 `
 
 export const Label = styled.div`
-  font-family: ${props => props.theme.fontFamily};
-  color: ${props => props.theme.color};
+  font-family: ${props => props.theme.fontFamily };
+  color: gray;
+  font-size: small;
+  font-weight: 700;
+  width: 40%;
 `

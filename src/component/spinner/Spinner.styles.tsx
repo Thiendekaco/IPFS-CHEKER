@@ -5,7 +5,7 @@ export const SpinnerOverLay = styled.div`
     height: 50px;
     width: 50px;
     display: flex;
-    margin-top: 10px;
+    margin-top: 5px;
     justify-content: center;
     align-items: center;
 `

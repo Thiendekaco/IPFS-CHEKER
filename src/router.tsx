@@ -6,14 +6,14 @@ import { useEffect } from "react";
 
 const Router = ()=>{
     const param = useParams();
-    const naviagte = useNavigate();
-    // useEffect(() => {
-    //     if(!(param['*']?.includes('type1') ||
-    //         param['*']?.includes('type2') ||
-    //         param['*']?.includes('type3'))){
-    //        naviagte("type1");
-    //     }
-    // }, []);
+    const navigate = useNavigate();
+    useEffect(() => {
+        if(!(param['*']==='type1' ||
+            param['*'] === 'type2' ||
+            param['*'] === 'type3')){
+           navigate("type1");
+        }
+    }, []);
     return (
         <Routes>
             <Route path="/*"   element={<App/>}>

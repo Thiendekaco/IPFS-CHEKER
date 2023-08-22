@@ -53,7 +53,7 @@ export const ImageNFT = styled.img`
   object-fit: cover;
   border-radius: 20px;
   border: double 1px ${ props => props.theme. backgroundColorCollection};
-  animation: ${ fadeUp } ease-in-out 1s;
+  animation: ${ fadeUp } ease-in-out 2s;
 `
 export const NotFoundImageNFT = styled.div`
   width: 30%;
@@ -65,10 +65,10 @@ export const NotFoundImageNFT = styled.div`
   animation: ${ fadeUp } ease-in-out 1s;
 `
 export  const SpanInformation = styled.span`
-        font-family : ${ props => props.theme.fontFamily};
-        color:  ${ props => props.theme.color};
-        font-size : xxx-large;
-        white-space: nowrap;
-        margin: 20px 0 0 0;
-        animation : ${ fadeUp } ease-in-out 0.3s
+    font-family : ${ props => props.theme.fontFamily};
+    color:  ${ props => props.theme.color};
+    font-size : xxx-large;
+    white-space: nowrap;
+    margin: 20px 0 0 0;
+    animation : ${ fadeUp } ease-in-out 0.3s
 `
