@@ -33,9 +33,8 @@ const GateWayCanAccess = ( { onCheckProps, index} :gatewayProps )=>{
     const gateWayCheckLocation = new CheckCountryHostClass();
 
 
-
     const getUrlCanBeAccess = async ()=>{
-        await gateWayCheckAccess.onCheck({gateWayUrl: onCheckProps.gateWayUrl, typeCheck: 1,});
+        await gateWayCheckAccess.onCheck({gateWayUrl: onCheckProps.gateWayUrl, typeCheck: onCheckProps.typeCheck,});
         getResultCheckAccess({data : gateWayCheckAccess.getLinkImage(), isLoading : gateWayCheckAccess.getIsLoading() });
         setIsUrlAccess(gateWayCheckAccess.getStateIsOnline());
         if(gateWayCheckAccess.getStateIsOnline()){
@@ -47,7 +46,7 @@ const GateWayCanAccess = ( { onCheckProps, index} :gatewayProps )=>{
         }
 
     const getLocationOfHostName =  async ()=>{
-        await gateWayCheckLocation.onCheck({gateWayUrl: onCheckProps.gateWayUrl, typeCheck: 1,});
+        await gateWayCheckLocation.onCheck({gateWayUrl: onCheckProps.gateWayUrl, typeCheck: onCheckProps.typeCheck,});
         getResultCheckLocation({data : gateWayCheckLocation.getLinkImage(), isLoading: gateWayCheckLocation.getIsLoading()});
     }
 
@@ -56,7 +55,6 @@ const GateWayCanAccess = ( { onCheckProps, index} :gatewayProps )=>{
     }
 
     useEffect(() => {
-
         getResultCheckAccess({...resultCheckAccess, isLoading: true});
         getResultCheckLocation({...resultCheckLocation, isLoading : true})
         try{
@@ -68,7 +66,7 @@ const GateWayCanAccess = ( { onCheckProps, index} :gatewayProps )=>{
         }catch (e){}
 
 
-    }, [gateWayCheckAccess.getLinkImage(), gateWayCheckLocation.getLinkImage()]);
+    }, [gateWayCheckAccess.getLinkImage(), gateWayCheckLocation.getLinkImage(), onCheckProps.typeCheck]);
 
 
     return (

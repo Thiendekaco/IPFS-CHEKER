@@ -21,7 +21,7 @@ export const NavigateContainer = styled.div`
 `
 
 
-export const NavigateFormatHostName = styled.div`
+export const NavigateFormatHostName = styled(Link)`
   color: ${props => props.theme.color};
   text-decoration: none;
   margin-right: 20px;
@@ -31,11 +31,11 @@ export const NavigateFormatHostName = styled.div`
 
 export const ContentContainer = styled.div`
   width: 100%;
-  height: 300px;
+  height: 400px;
   overflow-y: scroll ;
   -ms-overflow-style: none;
   scrollbar-width: none;
-
+  animation: ${ fadeUp } ease-in-out 1s;
   &::-webkit-scrollbar {
     display: none;
   }

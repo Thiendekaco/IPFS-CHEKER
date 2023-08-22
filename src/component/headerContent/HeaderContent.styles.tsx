@@ -55,6 +55,15 @@ export const ImageNFT = styled.img`
   border: double 1px ${ props => props.theme. backgroundColorCollection};
   animation: ${ fadeUp } ease-in-out 1s;
 `
+export const NotFoundImageNFT = styled.div`
+  width: 30%;
+  height : 100%;
+  margin-top: 10px;;
+  border-radius: 20px;
+  background-color: ${ props => props.theme. backgroundColorCollection}; ;
+  border: double 1px ${ props => props.theme. backgroundColorCollection};
+  animation: ${ fadeUp } ease-in-out 1s;
+`
 export  const SpanInformation = styled.span`
         font-family : ${ props => props.theme.fontFamily};
         color:  ${ props => props.theme.color};

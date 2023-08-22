@@ -3,18 +3,20 @@ import {
     InformationContent,
     TitleHeader,
     TitleHeaderContainerStyle,
-    InformationItem, ImageNFT, SpanInformation
+    InformationItem,
+    ImageNFT,
+    SpanInformation,
+    NotFoundImageNFT
 } from "./HeaderContent.styles";
 import {useContext, CSSProperties, useState} from "react";
 import { GatewayContext } from "../../context";
 import {BaseChecked} from "../../class/baseCheck.class";
-import {fadeUp} from "../../styles/animation.styles";
-import {keyframes} from "styled-components";
+
 
 const HeaderContentComponent = ()=>{
     const { gateway } = useContext( GatewayContext );
     const [ counter, setCounter ] = useState(0)
-    const [ linkNFTImgae, setLinkNFTImage ] = useState('')
+    const [ linkNFTImage, setLinkNFTImage ] = useState('')
 
     setTimeout(()=>{
         setCounter(BaseChecked.gatewayArr)
@@ -42,7 +44,7 @@ const HeaderContentComponent = ()=>{
                 </InformationItem>
                 <InformationItem image={'true'}>
                     NFT Image
-                    {linkNFTImgae !== '' && <ImageNFT src={linkNFTImgae} /> }
+                    {linkNFTImage !== '' ? <ImageNFT src={linkNFTImage} /> : <NotFoundImageNFT /> }
                 </InformationItem>
             </InformationContent>
         </HeaderContentStyles>

@@ -30,7 +30,6 @@ export abstract class BaseChecked {
         try {
             const response =   await axios.get(UrlCheckNFT);
             this.statusCodeUrlNFT = { data : response.data, status: response.status};
-            console.log(this.statusCodeUrlNFT, UrlCheckNFT)
         }catch (error){
             const message = ( error as AxiosError);
             BaseChecked.statusCode = message.request.status;
@@ -40,7 +39,6 @@ export abstract class BaseChecked {
 
     public setAll (isLoading: boolean, onError : boolean, onPass : boolean){
         this.isLoading = isLoading;
-
     }
 
 

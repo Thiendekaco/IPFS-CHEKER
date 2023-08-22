@@ -5,7 +5,8 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import GateWayProvider from "./provider/GateWay.Provider";
 import ThemeProviderStyled from "./provider/Theme.Provider";
-
+import { HashRouter } from 'react-router-dom';
+import Router from './router'
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -13,9 +14,11 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
       <ThemeProviderStyled >
-          <GateWayProvider>
-                <App />
-          </GateWayProvider>
+          <HashRouter >
+              <GateWayProvider>
+                    <Router />
+              </GateWayProvider>
+          </HashRouter>
       </ThemeProviderStyled>
   </React.StrictMode>
 );

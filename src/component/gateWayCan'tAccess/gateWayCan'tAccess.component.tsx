@@ -29,12 +29,12 @@ const GateWayCanNotAccess = ( { onCheckProps }:  GateWayInterface )=>{
 
 
     const getUrlCanBeAccess = async ()=>{
-        await gateWayCheckAccess.onCheck({gateWayUrl: onCheckProps.gateWayUrl, typeCheck: 1,});
+        await gateWayCheckAccess.onCheck({gateWayUrl: onCheckProps.gateWayUrl, typeCheck: onCheckProps.typeCheck,});
         setIsUrlAccess(gateWayCheckAccess.getStateIsOnline());
         setIsLoading(false);
     }
     const getLocationOfHostName =  async ()=>{
-        await gateWayCheckLocation.onCheck({gateWayUrl: onCheckProps.gateWayUrl, typeCheck: 1,});
+        await gateWayCheckLocation.onCheck({gateWayUrl: onCheckProps.gateWayUrl, typeCheck: onCheckProps.typeCheck,});
         getResultCheckLocation({data : gateWayCheckLocation.getLinkImage(), isLoading: gateWayCheckLocation.getIsLoading()});
     }
 
@@ -48,7 +48,7 @@ const GateWayCanNotAccess = ( { onCheckProps }:  GateWayInterface )=>{
         }catch (e){}
 
 
-    }, [gateWayCheckAccess.getLinkImage(), gateWayCheckLocation.getLinkImage()]);
+    }, [gateWayCheckAccess.getLinkImage(), gateWayCheckLocation.getLinkImage(), onCheckProps.typeCheck]);
 
 
     return (
