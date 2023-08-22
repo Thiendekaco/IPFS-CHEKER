@@ -48,7 +48,7 @@ const HeaderContentComponent = ()=>{
                 <InformationItem image={'false'}>
                     Can Connect
                     <SpanInformation>
-                    { counter/2 }
+                    { counter }
                     </SpanInformation>
                 </InformationItem>
                 <InformationItem image={'true'}>
