@@ -57,7 +57,6 @@ const HeaderContentComponent = ()=>{
                 </InformationItem>
             </InformationContent>
         </HeaderContentStyles>
-
     )
 
 

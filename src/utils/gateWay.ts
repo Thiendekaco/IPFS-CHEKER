@@ -5,7 +5,6 @@ export default [
     'ninetailed.ninja',
     'via0.com',
     'ipfs.eternum.io',
-    'hardbin.com',
     'cloudflare-ipfs.com',
     'astyanax.io',
     'cf-ipfs.com',
