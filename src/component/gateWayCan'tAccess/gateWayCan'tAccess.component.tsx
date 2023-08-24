@@ -1,7 +1,13 @@
 import { useState, useEffect } from "react";
 import { propsOnCheck } from "../../types";
 import { CheckOnlineGateWayClass } from "../../class/checkOnlineGateWay.class";
-import { HostNameItemStyles, HostNameStyles, ImgCountryHost, ImgCountryHostNotFound } from "./gateWayCan'tAccess.styles";
+import {
+    HostNameItemStyles,
+    HostNameStyles,
+    ImgCountryHost,
+    ImgCountryHostNotFound,
+    URLShow
+} from "./gateWayCan'tAccess.styles";
 import { CheckCountryHostClass } from "../../class/checkCountryHost.class";
 import { propertiesOfOnCheck } from '../../types';
 import { toShort } from "@subwallet/react-ui/es/_util/address";
@@ -52,7 +58,10 @@ const GateWayCanNotAccess = ( { onCheckProps }:  GateWayInterface )=>{
                 !isUrlCanBeAccess && <HostNameItemStyles isLoading = { isLoading }>
                     { isLoading ? <Spinner />  : <MarginBox />  }
                     <HostNameStyles>{toShort(onCheckProps.gateWayUrl.replace('*', ''), 20, 0)}</HostNameStyles>
-                    {  resultCheckLocation.data ?  <ImgCountryHost src={resultCheckLocation.data} alt={resultCheckLocation.data}/> : <ImgCountryHostNotFound />}
+                    <div style={{flexBasis : '300px', flexShrink: '1', flexGrow: '0', maxWidth:'500px'}}>
+                        {  resultCheckLocation.data ?  <ImgCountryHost src={ resultCheckLocation.data } alt={ resultCheckLocation.data }/> : <ImgCountryHostNotFound />}
+                    </div>
+                    <URLShow> { gateWayCheckAccess.getLinkImage() } </URLShow>
                 </HostNameItemStyles>
             }
         </>

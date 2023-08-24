@@ -6,7 +6,7 @@ import {
     NavigateContainer,
     NavigateFormatHostName,
     Label,
-    LabelContainer
+    LabelContainer, FooterDiv
 } from "./CollectionHostway.styles";
 import GateWayCanNotAccess from "../gateWayCan'tAccess/gateWayCan'tAccess.component";
 import GateWayCanAccess from "../gateWayCanAccess/gateWayCanAccess.component";
@@ -16,15 +16,37 @@ import GateWay from "../../utils/gateWay";
 
 export const styleLabelCountry : CSSProperties = {
     color: 'gray',
+    fontFamily: 'Plus Jakarta Sans',
     fontSize: 'small',
+    textAlign: 'end',
     fontWeight: 700,
-    marginLeft: '45px',
-    width: '18%'
+    flexBasis : '300px',
+    flexShrink: 1,
+    flexGrow: 0,
+    marginTop: '17px',
 }
 export const styleLabelCords : CSSProperties = {
+    flexBasis: '30px',
+    flexShrink: '1',
     color: 'gray',
+    fontFamily: 'Plus Jakarta Sans',
+    paddingLeft: '95px',
     fontSize: 'small',
     fontWeight: 700,
+    paddingTop: '17px',
+}
+export const styleLabelURL: CSSProperties = {
+    color: 'gray',
+    textAlign: "center",
+    fontFamily: 'Plus Jakarta Sans',
+    fontSize: 'small',
+    fontWeight: 700,
+    flexBasis: '400px',
+    margin: '17px 0 0 130px',
+    overflow: 'hidden',
+    textOverflow: 'ellipsis',
+    whiteSpace: 'nowrap',
+    paddingRight: '50px',
 }
 
 const CollectionHostwayComponent = () =>{
@@ -51,8 +73,9 @@ const CollectionHostwayComponent = () =>{
                 </NavigateContainer>
                 <LabelContainer>
                     <Label>HOSTNAME</Label>
-                    <div style={styleLabelCountry}>COUNTRY</div>
-                    <div style={styleLabelCords}>CORDS</div>
+                    <div style={ styleLabelCountry }>COUNTRY</div>
+                    <div style={ styleLabelCords }>CORDS</div>
+                    <div style={ styleLabelURL }>URL</div>
                 </LabelContainer>
                 <ContentContainer>
                     {
@@ -67,6 +90,7 @@ const CollectionHostwayComponent = () =>{
                         ))
                     }
                 </ContentContainer>
+                <FooterDiv />
             </CollectionHostwayStyles>
         }</>
 

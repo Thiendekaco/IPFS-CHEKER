@@ -14,7 +14,6 @@ export const HostNameItemStyles = styled.div<propsIsLoading>`
   width: 100%;
   margin-bottom: 10px;
   height : 60px;
-  padding-left: 10px;
   border-radius : 10px;
   border: 1px solid ${props => props.isLoading ? props.theme.backgroundColorCollection : props.theme.borderColorCantAccess};
   background-color : ${props => props.theme.backgroundColorCollection};
@@ -28,22 +27,39 @@ export const HostNameStyles = styled.h4`
   font-family: ${props => props.theme.fontFamily};
   color: ${props => props.theme.color};
   font-weight: 300;
-  width: 40%;
-  margin-top: 17px;
+  flex-basis: 200px;
+  flex-shrink: 0;
+  white-space: nowrap;
+  margin: 19px 0 0 0 ;
 `
 
 export const ImgCountryHost = styled.img`
   width: 25px;
   height: 25px;
   border: solid 0 transparent;
-  border-radius: 30%;
+  margin-left: 85%;
+  border-radius: 40%;
   margin-top: 17px;
+
 `
 export const ImgCountryHostNotFound = styled.div`
   width: 25px;
   height: 25px;
+  margin-left: 85%;
   border: solid 0 transparent;
-  border-radius: 40%;
+  border-radius: 30%;
   background-color: ${ props => props.theme.background_colorContent };
   margin-top: 17px;
+
+`
+export const URLShow = styled.div`
+  color: ${props => props.theme. color};
+  font-family: ${props => props.theme.fontFamily};
+  font-weight: 300;
+  flex-basis: 400px;
+  margin: 17px 0 0 25px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding-right: 50px;
 `

@@ -7,7 +7,7 @@ import {
     HostNameStyles,
     ImgCountryHost,
     ImgCountryHostNotFound,
-    MarginBox
+    MarginBox, URLShow
 } from "./gateWayCanAccess.styles";
 import { CheckCountryHostClass } from "../../class/checkCountryHost.class";
 import { propertiesOfOnCheck } from '../../types';
@@ -85,10 +85,11 @@ const GateWayCanAccess = ( { onCheckProps, index} :gatewayProps )=>{
                 isUrlCanBeAccess && <HostNameItemStyles onClick = {()=>openWindowNFT()}>
                     { resultCheckAccess.isLoading && <MarginBox /> }
                     < HostNameStyles >{toShort(onCheckProps.gateWayUrl.replace('*', ''), 25, 0)}</HostNameStyles>
-                    <div style={{width : '15%'}}>
+                    <div style={{flexBasis : '300px', flexShrink: '1', flexGrow: '0', maxWidth:'500px'}}>
                         { resultCheckLocation.data ?  <ImgCountryHost src={ resultCheckLocation.data } alt={ resultCheckLocation.data }/> : <ImgCountryHostNotFound /> }
                     </div>
                     <CheckCordsStyle>{ isCords_  && '*' }</CheckCordsStyle>
+                    <URLShow>{ resultCheckAccess.data }</URLShow>
                 </HostNameItemStyles>
             }
         </>

@@ -5,15 +5,17 @@ import { fadeUp } from "../../styles/animation.styles";
 
 export const CollectionHostwayStyles = styled.div`
     width: 90%;
-    height: 75%;
     display: flex;
+    flex-grow: 1;
+    flex-shrink: 3;
+    flex-basis: 250px;
     flex-direction: column;
-    margin: auto;
     animation: ${ fadeUp } ease-in-out 1s;
 `
 
 
 export const NavigateContainer = styled.div`
+  flex-grow: 0;
   width: 90%;
   display: flex;
   flex-direction: row;
@@ -31,10 +33,13 @@ export const NavigateFormatHostName = styled(Link)`
 
 export const ContentContainer = styled.div`
   width: 100%;
-  height: 350px;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 200px;
   overflow-y: scroll ;
   -ms-overflow-style: none;
   scrollbar-width: none;
+  margin-bottom: -20px;
   animation: ${ fadeUp } ease-in-out 1s;
   &::-webkit-scrollbar {
     display: none;
@@ -44,7 +49,9 @@ export const ContentContainer = styled.div`
 export const LabelContainer = styled.div`
   display: flex;
   flex-direction: row;
-  margin: 0 100px 10px 50px;
+  width: 100%;
+  margin-bottom: 20px;
+  padding-left: 50px;
 `
 
 export const Label = styled.div`
@@ -52,5 +59,13 @@ export const Label = styled.div`
   color: gray;
   font-size: small;
   font-weight: 700;
-  width: 40%;
+  flex-basis: 200px;
+  flex-shrink: 0;
+  white-space: nowrap;
+  margin: 19px 0 0 0 ;
+`
+
+export const FooterDiv = styled.div`
+  //flex-grow: 0;
+  //flex-basis: 100px;
 `
