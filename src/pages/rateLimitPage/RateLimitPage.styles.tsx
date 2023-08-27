@@ -75,9 +75,7 @@ export const NFTItem = styled.img`
 `
 
 
-export const ButtonBack = styled.button`
 
-`
 export const HeaderContentStyles = styled.div`
     width: 90%;
     margin: auto;
@@ -125,7 +123,7 @@ export const Label = styled.div`
   font-weight: 700;
   flex-grow: 1;
   white-space: nowrap;
-  margin: 0 20px 20px  0;
+  margin: 10px 20px 20px  0;
 `
 export const ButtonCheck = styled.button<propsOfButtonCheck>`
   flex-basis: 200px;

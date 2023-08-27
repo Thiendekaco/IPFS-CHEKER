@@ -55,6 +55,11 @@ const CollectionHostwayComponent = () =>{
     const [ param_, setParam_ ] = useState(0);
     const [ showUp, setShowUp ] = useState(false);
     useEffect(() => {
+        const previousParam = localStorage.getItem('previousParam');
+        localStorage.setItem('previousParam', 'none');
+        if(previousParam){
+            previousParam === 'checkRateLimit' && window.location.reload();
+        }
         setShowUp(false);
         console.log(param['*'])
         setGateway(GateWay);

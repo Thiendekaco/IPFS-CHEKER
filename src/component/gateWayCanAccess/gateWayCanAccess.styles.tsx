@@ -94,7 +94,7 @@ export const ButtonCheckRateLimit = styled.div`
   background-color: black;
   text-decoration: none;
   text-align: center;
-  margin: 3px 0 0 190px;
+  margin: 3px 0 0 290px;
   border-radius: 10px;
   padding-top: 15px;
   opacity: 1;

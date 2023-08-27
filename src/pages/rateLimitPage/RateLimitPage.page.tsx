@@ -50,8 +50,8 @@ const RateLimitPage = ()=>{
 
     }
     const handleBackToMainPage = () =>{
-        navigate(`/type${arrParam[1]}`);
-
+        localStorage.setItem('previousParam', 'checkRateLimit');
+        navigate(`/type${arrParam[1]}`)
     }
     useEffect(() => {
         setLinkNFTImage(BaseChecked.gatewayArrIndex0);

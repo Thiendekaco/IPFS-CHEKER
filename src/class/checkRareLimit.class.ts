@@ -34,7 +34,7 @@ export class CheckRareLimitClass extends BaseChecked{
 
     async checkLimitOfHost(date : number, NFTUrl : string){
         try{
-            await  Promise.all([ axios.get(this.urlNFT), axios.get(this.urlNFT), axios.get(NFTUrl), axios.get(NFTUrl)]);
+            await  Promise.all([ axios.get(NFTUrl), axios.get(NFTUrl), axios.get(NFTUrl), axios.get(NFTUrl)]);
         }catch(e){
             this._errorRequest ++;
             console.log(Date.now(), date)
