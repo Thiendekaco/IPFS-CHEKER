@@ -15,7 +15,8 @@ export interface ThemeProviderProps  {
          backgroundColorCollection : '#1f1d1d',
          fontFamily : 'Plus Jakarta Sans',
          borderColorCanAccess :  '#095609',
-         borderColorCantAccess : '#5d1010'
+         borderColorCantAccess : '#5d1010',
+         backgroundCheck : '#242f1e'
      }
 
 

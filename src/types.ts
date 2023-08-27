@@ -37,5 +37,6 @@ export interface Theme {
     backgroundColorCollection : string,
     fontFamily : string,
     borderColorCanAccess : string,
-    borderColorCantAccess : string
+    borderColorCantAccess : string,
+    backgroundCheck : string
 }

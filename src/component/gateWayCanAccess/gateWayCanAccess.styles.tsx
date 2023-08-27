@@ -1,5 +1,6 @@
 import  { styled } from "styled-components";
 import { slideDown } from "../../styles/animation.styles";
+import { Link } from "react-router-dom";
 
 
 export interface propsIsLoading {
@@ -76,9 +77,38 @@ export const URLShow = styled.div`
   font-family: ${props => props.theme.fontFamily};
   font-weight: 300;
   flex-basis: 400px;
+  
   margin: 17px 0 0 170px;
+  flex-shrink: 1;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
   padding-right: 50px;
+`
+
+export const ButtonCheckRateLimit = styled.div`
+  flex-basis: 100px;
+  height: 90%;
+  font-family: ${props => props.theme.fontFamily};
+  color: ${props => props.theme.color};
+  background-color: black;
+  text-decoration: none;
+  text-align: center;
+  margin: 3px 0 0 190px;
+  border-radius: 10px;
+  padding-top: 15px;
+  opacity: 1;
+  cursor: pointer;
+  &:hover{
+    opacity: 0.5;
+  }
+`
+export const RateLimitSpan = styled.span`
+  font-family: ${props => props.theme.fontFamily};
+  color: ${props => props.theme.color};
+  font-weight: 300;
+  flex-basis: 200px;
+  flex-shrink: 0;
+  white-space: nowrap;
+  margin: 19px 0 0 0 ;
 `

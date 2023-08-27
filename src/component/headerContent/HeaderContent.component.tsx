@@ -28,9 +28,9 @@ const HeaderContentComponent = ()=>{
     }, [ param ]);
 
     setTimeout(()=>{
-        setCounter(BaseChecked.gatewayArr)
-        setLinkNFTImage(BaseChecked.gatewayArrIndex0)
-    }, 4500)
+        setCounter(BaseChecked.gatewayArr);
+        setLinkNFTImage(BaseChecked.gatewayArrIndex0);
+    }, 5500)
     return(
         <HeaderContentStyles>
             <TitleHeaderContainerStyle>
@@ -48,12 +48,12 @@ const HeaderContentComponent = ()=>{
                 <InformationItem image={'false'}>
                     Can Connect
                     <SpanInformation>
-                    { counter }
+                    { counter /2 }
                     </SpanInformation>
                 </InformationItem>
                 <InformationItem image={'true'}>
                     NFT Image
-                    {linkNFTImage !== '' ? <ImageNFT src={linkNFTImage} /> : <NotFoundImageNFT /> }
+                    { linkNFTImage !== '' ? <ImageNFT src={linkNFTImage} /> : <NotFoundImageNFT /> }
                 </InformationItem>
             </InformationContent>
         </HeaderContentStyles>

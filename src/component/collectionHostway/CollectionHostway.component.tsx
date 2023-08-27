@@ -56,6 +56,7 @@ const CollectionHostwayComponent = () =>{
     const [ showUp, setShowUp ] = useState(false);
     useEffect(() => {
         setShowUp(false);
+        console.log(param['*'])
         setGateway(GateWay);
         setParam_(param['*'] ? Number.parseInt((param['*']?.replace('type', ''))) : 0)
         setTimeout(()=>{
@@ -67,9 +68,9 @@ const CollectionHostwayComponent = () =>{
        <> {
             showUp && <CollectionHostwayStyles>
                 <NavigateContainer>
-                    <NavigateFormatHostName to='/type1'>Type 1</NavigateFormatHostName>
-                    <NavigateFormatHostName to='/type2'>Type 2</NavigateFormatHostName>
-                    <NavigateFormatHostName to='/type3'>Type 3</NavigateFormatHostName>
+                    <NavigateFormatHostName to='/type1' isChoide={ param['*'] === 'type1' }>Type 1</NavigateFormatHostName>
+                    <NavigateFormatHostName to='/type2' isChoide={ param['*'] === 'type2' }>Type 2</NavigateFormatHostName>
+                    <NavigateFormatHostName to='/type3' isChoide={ param['*'] === 'type3' }>Type 3</NavigateFormatHostName>
                 </NavigateContainer>
                 <LabelContainer>
                     <Label>HOSTNAME</Label>

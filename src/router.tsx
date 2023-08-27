@@ -1,7 +1,8 @@
 import {Route, Routes, useNavigate, useParams} from "react-router";
 import App from "./App";
-import MainPage from "./pages/mainPage.page";
+import MainPage from "./pages/mainPage/mainPage.page";
 import { useEffect } from "react";
+import RateLimitPage from "./pages/rateLimitPage/RateLimitPage.page";
 
 
 const Router = ()=>{
@@ -20,6 +21,7 @@ const Router = ()=>{
                 <Route path = "type1" index={true} element={<MainPage />} />
                 <Route path = "type2"  element={<MainPage />} />
                 <Route path = "type3"  element={<MainPage />} />
+                <Route path= ":checkRateLimit" element={<RateLimitPage />} />
             </Route>
         </Routes>
     )

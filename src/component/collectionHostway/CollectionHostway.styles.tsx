@@ -3,6 +3,10 @@ import { Link } from "react-router-dom";
 import { fadeUp } from "../../styles/animation.styles";
 
 
+export interface linkWasChoice {
+    isChoide : boolean
+}
+
 export const CollectionHostwayStyles = styled.div`
     width: 90%;
     display: flex;
@@ -23,12 +27,26 @@ export const NavigateContainer = styled.div`
 `
 
 
-export const NavigateFormatHostName = styled(Link)`
+export const NavigateFormatHostName = styled(Link)<linkWasChoice>`
   color: ${props => props.theme.color};
   text-decoration: none;
   margin-right: 20px;
+  display: block;
   font-family: ${props => props.theme.fontFamily};
-  
+  &:after {
+    content: '';
+    display: block;
+    margin-top: 8px;
+    height: 1.5px;
+    width: ${ props => props.isChoide ? '100%' : '0'};
+    background: ${ props => props.isChoide ? 'white' : 'transparent'};;
+    transition: width .3s ease, background-color .3s ease;
+  }
+  &:hover:after{
+    width: 100%;
+    background: white;
+
+  }
 `
 
 export const ContentContainer = styled.div`

@@ -45,7 +45,7 @@ export const InformationItem = styled.div<isImage>`
   animation: ${ slideDown } ease-in-out 0.3s;
 `
 export const ImageNFT = styled.img`
-  width: 30%;
+  width: 170px;
   height: 100%;
   margin-top: 10px;
   object-fit: cover;
@@ -58,8 +58,8 @@ export const ImageNFT = styled.img`
   }
 `
 export const NotFoundImageNFT = styled.div`
-  width: 30%;
-  height : 100%;
+  width: 170px;
+  height: 100%;
   margin-top: 10px;;
   border-radius: 20px;
   background-color: ${ props => props.theme. backgroundColorCollection}; ;
@@ -73,4 +73,5 @@ export  const SpanInformation = styled.span`
     white-space: nowrap;
     margin: 20px 0 0 0;
     animation : ${ fadeUp } ease-in-out 0.3s
+  
 `

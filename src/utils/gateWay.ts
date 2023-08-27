@@ -1,4 +1,5 @@
 export default [
+    "ipfs2.rmrk.link",
     'ipfs.io',
     'dweb.link',
     'gateway.ipfs.io',

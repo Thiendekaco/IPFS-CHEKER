@@ -44,6 +44,7 @@ export class CheckOnlineGateWayClass extends BaseChecked{
                      }
                  )
                 BaseChecked.statusCode === 401 ? this.isAuthentication = true : this.isAuthentication = false;
+
             }catch (error){
 
             }
